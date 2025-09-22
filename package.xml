@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypePath="ament_xmlschema/schema/package_format3.xsd"?>
+<package format="3">
+  <name>ros2_mavsdk_test</name>
+  <version>1.1.0</version>
+  <description>Essential C++ test nodes for PX4-Gazebo-ROS2 communication with MAVSDK integration</description>
+  <maintainer email="tbhowmik@highfive.delivery">Tanumaya Bhowmik</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Core ROS2 dependencies -->
+  <depend>rclcpp</depend>
+  <depend>rmw</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+
+  <!-- PX4 message dependencies -->
+  <depend>px4_msgs</depend>
+
+  <!-- MAVSDK system dependency (installed separately) -->
+  <!-- Note: MAVSDK should be installed system-wide or via package manager -->
+  <!-- Ubuntu: sudo apt install libmavsdk-dev -->
+  <!-- or build from source: https://github.com/mavlink/MAVSDK -->
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
