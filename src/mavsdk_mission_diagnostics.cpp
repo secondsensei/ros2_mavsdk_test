@@ -489,7 +489,7 @@ private:
         // Use the actual field names from VehicleCommandAck message
         if (msg->result == 0) // Assuming 0 = ACCEPTED based on MAVLink standards
         {
-            RCLCPP_DEBUG(this->get_logger(), "✅ Vehicle command accepted (cmd=%u)", msg->command);
+            RCLCPP_INFO(this->get_logger(), "✅ Vehicle command accepted (cmd=%u)", msg->command);
         }
         else if (msg->result == 4) // Assuming 4 = DENIED based on MAVLink standards
         {
@@ -501,7 +501,7 @@ private:
         }
         else
         {
-            RCLCPP_DEBUG(this->get_logger(), "📋 Vehicle command result=%u (cmd=%u)", msg->result, msg->command);
+            RCLCPP_INFO(this->get_logger(), "📋 Vehicle command result=%u (cmd=%u)", msg->result, msg->command);
         }
     }
 
